@@ -6,7 +6,7 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-PUPPETMASTER="puppet.sysops.lab"
+PUPPETMASTER="puppet"
 
 # Installing Yum repo and puppet
 rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
