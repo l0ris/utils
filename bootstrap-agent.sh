@@ -7,8 +7,12 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 PUPPETMASTER="puppet"
-
-# Installing Yum repo and puppet
+# Installing Yum repo 
 rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
+
+# Installing Puppet
 yum -y install puppet
 echo "Puppet Installed"
+
+# Initial puppet run!
+puppet agent -tv --noop --server $PUPPETMASTER 
